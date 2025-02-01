@@ -1,0 +1,112 @@
+
+.navbar {
+    background-color: #ce8282; 
+    padding: 10px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    flex-wrap: wrap; 
+    padding-right: 40px; 
+  }
+  
+  /* Logo Styles */
+  .logo h2 {
+    color: #030c13; 
+    font-size: 24px; 
+    font-weight: bold; 
+    margin: 0;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
+    display: none; /* Hide hamburger icon by default */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer; 
+  }
+  
+  .hamburgerLine {
+    width: 30px; 
+    height: 4px; 
+    background-color: white; 
+    border-radius: 5px;
+  }
+  
+  /* Navigation Links Container */
+  .navLinks {
+    display: flex; 
+    gap: 30px; 
+    align-items: center; 
+    padding: 0;
+    justify-content: flex-start; 
+  }
+  
+  /* Padding for each navigation item (button) */
+  .navItem {
+    color: rgb(20, 14, 14);
+    text-decoration: none; 
+    font-size: 18px; 
+    font-weight: 500; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+    padding: 12px 25px; 
+  }
+  
+  .navItem:hover {
+    color: #3498db; 
+    transform: scale(1.1); 
+  }
+  
+  .navItem:active {
+    color: #2980b9; 
+  }
+  
+  /* Active Link Styling */
+  .active {
+    color: #080f13; 
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; 
+      align-items: center; 
+      padding: 10px; 
+    }
+  
+    /* Show the hamburger icon on mobile */
+    .hamburger {
+      display: flex; 
+    }
+  
+    .navLinks {
+      display: none; 
+      flex-direction: column; 
+      gap: 15px; 
+      align-items: center;
+      width: 100%; 
+      padding-top: 10px;
+    }
+  
+    /* Show the nav links when the menu is open */
+    .activeMenu {
+      display: flex;
+    }
+  
+    .navItem {
+      font-size: 16px; 
+      padding: 12px 25px; 
+      width: 100%; 
+      text-align: center; 
+    }
+  }
+  
+  /* Add more margin to the Contact button (last item) */
+  .navLinks .navItem:last-child {
+    margin-right: 20px; 
+  }

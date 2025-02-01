@@ -1,0 +1,201 @@
+/* General Section Styling */
+.section {
+    background: linear-gradient(135deg, #a9ca74, #134055); /* Initial gradient background */
+    padding: 80px 20px; /* Padding for content */
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    overflow: hidden; /* Hide overflow */
+    position: relative;
+    animation: slideGradient 12s ease infinite; /* Sliding gradient animation */
+  }
+  
+  /* Keyframe for Sliding Gradient Animation */
+  @keyframes slideGradient {
+    0% {
+      background: linear-gradient(135deg, #092f4e, #4a066d);
+    }
+    50% {
+      background: linear-gradient(45deg, #8e44ad, #3498db);
+    }
+    100% {
+      background: linear-gradient(135deg, #2980b9, #8e44ad);
+    }
+  }
+  
+  /* Container to limit content width */
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Flexbox Layout for Content */
+  .contentWrapper {
+    display: flex;
+    flex-direction: column; /* Stack items on small screens */
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease-out forwards; /* Fade in effect on load */
+    animation-delay: 0.3s;
+  }
+  
+  /* Image Wrapper Styling */
+  .imageWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out forwards; /* Fade in effect */
+    animation-delay: 0.6s;
+  }
+  
+  /* Parallax Effect for Profile Image */
+  .profileImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3498db;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    will-change: transform, filter;
+    animation: zoomIn 1s ease-out forwards; /* Zoom effect on load */
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Hover Effect for Profile Image */
+  .profileImage:hover {
+    transform: scale(1.1); /* Zoom in slightly */
+    filter: brightness(1.2); /* Brighten the image */
+  }
+  
+  /* Text Wrapper Styling */
+  .textWrapper {
+    flex: 2;
+    max-width: 600px;
+    color: #fff;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.9s;
+  }
+  
+  /* Heading Styling */
+  .heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    opacity: 0; /* Initially hidden */
+    animation: slideIn 1s ease-out forwards; /* Slide-in animation */
+    animation-delay: 1.2s;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Highlight Styling for Part of Heading */
+  .highlight {
+    color: #02090e;
+  }
+  
+  /* Description Styling */
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-top: 20px;
+    color: #010e11; /* Light color for text */
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 1.5s;
+  }
+  
+  /* Subheading Styling */
+  .subHeading {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    color: #130303;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 1.8s;
+  }
+  
+  /* Mission Text Styling */
+  .missionText {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    line-height: 1.8;
+    color: #ecf0f1;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 2s;
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+    .contentWrapper {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .imageWrapper {
+      margin-bottom: 20px;
+    }
+  
+    .profileImage {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .heading {
+      font-size: 2rem;
+    }
+  
+    .subHeading {
+      font-size: 1.5rem;
+    }
+  
+    .description, .missionText {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Animation Keyframes for Fade-In & Slide-Up */
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  

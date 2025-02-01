@@ -1,0 +1,55 @@
+
+
+.footer {
+    background-color: #333; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer p {
+    font-size: 14px; 
+    margin-bottom: 10px; 
+  }
+  
+  .socialLinks {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+  }
+  
+  .iconLink {
+    color: white; 
+    text-decoration: none; 
+    transition: transform 0.3s ease; 
+  }
+  
+  .iconLink:hover {
+    transform: scale(1.1); 
+  }
+  
+  .icon {
+    color: white; 
+    transition: color 0.3s ease; 
+  }
+  
+  .iconLink:hover .icon {
+    color: #3498db; 
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 15px; 
+    }
+  
+    .socialLinks {
+      gap: 15px; 
+    }
+  
+    .footer p {
+      font-size: 12px; 
+    }
+  }

@@ -1,0 +1,245 @@
+/* Contact section background animation */
+.contactSection {
+    padding: 50px 0;
+    background: linear-gradient(135deg, #a372a5, #d4a1b9, #e48fb6, #eca9d8); 
+    background-size: 400% 400%; 
+    animation: gradientAnimation 15s ease infinite; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Keyframes for smooth gradient animation */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Container for the form */
+  .container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeInContainer 1.5s ease-out; 
+  }
+  
+  /* Fade-in effect for the container */
+  @keyframes fadeInContainer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Form header */
+  .heading {
+    font-size: 2.5rem;
+    color: rgb(31, 3, 31);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    animation: slideInFromLeft 1s ease-out; 
+  }
+  
+  /* Slide-in effect for the form header */
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Form container styles (with subtle glowing effect) */
+  .formContainer {
+    background: linear-gradient(145deg, #4144e9, #b475e0); 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    animation: glowEffect 2s ease-in-out infinite, bounceIn 1.2s ease-out; 
+  }
+  
+  /* Bounce-in effect for the form container */
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Glowing effect for the form container */
+  @keyframes glowEffect {
+    0% {
+      box-shadow: 0px 0px 10px rgba(69, 53, 80, 0.5);
+    }
+    50% {
+      box-shadow: 0px 0px 20px rgba(171, 143, 190, 0.8);
+    }
+    100% {
+      box-shadow: 0px 0px 10px rgba(106, 13, 173, 0.5);
+    }
+  }
+  
+  /* Title of the form */
+  .formTitle {
+    font-size: 1.75rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  /* Description of the form */
+  .formDescription {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  /* Input group container */
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Form input field styling */
+  .input, .textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;  
+    border-radius: 8px;
+    margin: 5px 0;
+    outline: none;
+    background: #ffffff;  
+    color: #333;  
+    transition: all 0.3s ease;
+  }
+  
+  /* Input and Textarea hover and focus effects */
+  .input:focus, .textarea:focus {
+    border: 2px solid #6a0dad;  
+    background: #fff;  
+    box-shadow: 0 0 5px rgba(106, 13, 173, 0.5);  
+  }
+  
+  /* Submit button styling */
+  .submitButton {
+    padding: 15px;
+    background-color: #546886;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #4b0082; 
+    transform: translateY(-2px);
+  }
+  
+  .submitButton:active {
+    transform: translateY(0); 
+  }
+  
+  /* Error message styling with glowing animation */
+  .error {
+    color: #fff;  
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: #ff6347;  /* Red background for errors */
+    animation: bounceError 0.8s ease-out, glowError 1.5s ease-in-out infinite;
+    box-shadow: 0px 4px 10px rgba(255, 99, 71, 0.3);
+  }
+  
+  /* Bounce-in effect for error message */
+  @keyframes bounceError {
+    0% {
+      transform: scale(0);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Glowing effect for error message */
+  @keyframes glowError {
+    0% {
+      box-shadow: 0px 0px 10px rgba(255, 99, 71, 0.5);
+    }
+    50% {
+      box-shadow: 0px 0px 20px rgba(255, 99, 71, 1);
+    }
+    100% {
+      box-shadow: 0px 0px 10px rgba(255, 99, 71, 0.5);
+    }
+  }
+  
+  /* Success message styling with glowing animation */
+  .success {
+    color: #fff;  
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: #82a882;  
+    animation: bounceSuccess 0.8s ease-out, glowSuccess 1.5s ease-in-out infinite;
+    box-shadow: 0px 4px 10px rgba(50, 205, 50, 0.3);
+  }
+  
+  /* Bounce-in effect for success message */
+  @keyframes bounceSuccess {
+    0% {
+      transform: scale(0);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Glowing effect for success message */
+  @keyframes glowSuccess {
+    0% {
+      box-shadow: 0px 0px 10px rgba(50, 205, 50, 0.5);
+    }
+    50% {
+      box-shadow: 0px 0px 20px rgba(50, 205, 50, 1);
+    }
+    100% {
+      box-shadow: 0px 0px 10px rgba(50, 205, 50, 0.5);
+    }
+  }
